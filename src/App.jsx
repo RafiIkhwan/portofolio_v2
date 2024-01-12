@@ -11,7 +11,7 @@ function App() {
 				<header className='flex flex-row justify-between'>
 					<h4>IKHWAN SITE'S</h4>
 					<nav>
-						<ul className='flex flex-row space-x-40' id='navigasi'>
+						<ul className='flex flex-row space-x-40'>
 							<li><a href="#home">Home</a></li>
 							<li><a href="#about">About</a></li>
 							<li><a href="#project">Project</a></li>
@@ -48,7 +48,7 @@ function App() {
 						</li>
 					</ul>
 				</header>
-				<main className='relative'>
+				<main className='relative' id='main'>
 					<div className="absolute w-full bottom-72 z-20 sm:block hidden">
 						<div className="flex flex-row justify-between min-h-[calc(100vh-550px)]">
 							<div className="flex flex-col justify-between max-w-[330px]">
