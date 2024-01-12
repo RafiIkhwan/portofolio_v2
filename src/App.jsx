@@ -6,8 +6,8 @@ function App() {
 
 	return (
 		<div className="bg-gradient-to-br from-[#E0ECFF] to-[#061834]">
-		{/* <div> */}
-			<div className="container mx-auto pt-8 h-screen overflow-hidden flex flex-col justify-between">
+			{/* <div> */}
+			<section id='home' className="container mx-auto pt-8 h-screen overflow-hidden flex flex-col justify-between">
 				<header className='flex flex-row justify-between'>
 					<h4>IKHWAN SITE'S</h4>
 					<nav>
@@ -50,7 +50,7 @@ function App() {
 				</header>
 				<main className='relative' id='main'>
 					<div className="absolute w-full bottom-72 z-20 sm:block hidden">
-						<div className="flex flex-row justify-between min-h-[calc(100vh-550px)]">
+						<div className="flex flex-row justify-between h-[calc(100vh-550px)] max-h-[500px]">
 							<div className="flex flex-col justify-between max-w-[330px]">
 								<h1 className='font-black text-2xl sm:text-4xl lg:text-6xl xl:text-7xl 2xl:text-8xl'>SOFTWARE</h1>
 								<p className='font-semibold text-2xl xl:text-4xl'>Currently study at <span className='font-bold'>SMKN 1 Cimahi</span></p>
@@ -62,13 +62,53 @@ function App() {
 						</div>
 					</div>
 					<div className="flex flex-row justify-center relative mb-auto h-screen box-border max-h-[850px]">
-						<p className='font-bold text-2xl absolute bottom-[720px] text-[#E0ECFF]' id='webdev'>WEB DEVELOPER</p>
-						<img className='object-contain max-w-5xl' src={Cloud} alt="cloud japanese background" />
-						<div className="radial absolute bottom-14 h-full max-h-[1000px] max-w-[1000px] w-full rounded-full"></div>
+						<p className='font-bold text-2xl absolute z-30 bottom-[780px] text-[#E0ECFF]' id='webdev'>WEB DEVELOPER</p>
+						<img className='object-contain static z-30 max-w-5xl' src={Cloud} alt="cloud japanese background" />
+						<div className="radial absolute bottom-14 h-full max-h-[1300px] max-w-[1300px] w-full rounded-full"></div>
 						<img className='object-cover object-top w-[700px] h-[660px] absolute bottom-0 z-30' src={SelfPicture} alt="my self picture" />
 					</div>
 				</main>
-			</div>
+			</section>
+			<section id='slogan' className="flex flex-row justify-around items-center h-[300px]">
+				<h2 className='text-[#CCDBF2] font-bold text-6xl'>INNOVATE</h2>
+				<h2 className='text-[#CCDBF2] font-bold text-6xl'>ELEVATE</h2>
+				<h2 className='text-[#CCDBF2] font-bold text-6xl'>OPTIMIZE</h2>
+			</section>
+			<section id='about' className='container relative mx-auto py-32 h-screen overflow-hidden'>
+				<div className="radial-2 absolute bottom-20 left-20 h-full max-h-[1000px] max-w-[1000px] w-full rounded-full"></div>
+				<div className=" flex flex-row justify-between space-x-20 w-full h-full">
+					<div className="relative flex justify-center items-center z-30">
+						<img className='object-contain max-w-2xl' src={Cloud} alt="cloud japanese background" />
+						<img className='object-cover object-top w-[480px] h-[700px] absolute bottom-0 z-30' src={SelfPicture} alt="my self picture" />
+					</div>
+					<div className="flex flex-col justify-between static z-30">
+						<h1 className='text-8xl text-[#E0ECFF] font-bold'>About Me</h1>
+						<p className='text-3xl text-[#CCDBF2] tracking-wider'>Hi, my name is Rafi Ikhwan, i also known as Rafi. Based in Bandung, Indonesia. I’m enthusiast with Front End Developer. I can do a lot stuff like Back-End Operations, Mobile Development and 3D Design.</p>
+						<div className="flex flex-col min-h-72">
+							<ul className='flex flex-row justify-between'>
+								<li className='text-[#061834] font text-3xl font-bold pb-3 bg-gradient-to-r from-[#061834] to-[#213b6671] bg-[length:100%_5px] bg-no-repeat bg-bottom'>Main Skills</li>
+								<li className='text-[#E0ECFF] font text-3xl font-bold pb-3 bg-gradient-to-r from-[#E0ECFF] to-[#E0ECFF] bg-[length:50%_5px] bg-no-repeat bg-left-bottom'>Languages</li>
+								<li className='text-[#E0ECFF] font text-3xl font-bold pb-3 bg-gradient-to-r from-[#E0ECFF] to-[#E0ECFF] bg-[length:50%_5px] bg-no-repeat bg-left-bottom'>Framework</li>
+								<li className='text-[#E0ECFF] font text-3xl font-bold pb-3 bg-gradient-to-r from-[#E0ECFF] to-[#E0ECFF] bg-[length:50%_5px] bg-no-repeat bg-left-bottom'>Education</li>
+							</ul>
+							<ul id='mainSkillList' className='flex flex-col space-y-10 pt-12'>
+								<li className='flex flex-col space-y-2'>
+									<h6 className='font-semibold text-3xl text-[#E0ECFF]'>Front-End Design</h6>
+									<p className='text-2xl text-[#CCDBF2]'>I can easily transform psd or fig into code ! </p>
+								</li>
+								<li className='flex flex-col space-y-2'>
+									<h6 className='font-semibold text-3xl text-[#E0ECFF]'>Back-End Operations</h6>
+									<p className='text-2xl text-[#CCDBF2]'>Expertly integrating coding languages and database management </p>
+								</li>
+								<li className='flex flex-col space-y-2'>
+									<h6 className='font-semibold text-3xl text-[#E0ECFF]'>Web Architecture</h6>
+									<p className='text-2xl text-[#CCDBF2]'>Building Website from zero ?, that’s my job </p>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</section>
 		</div>
 	)
 }
