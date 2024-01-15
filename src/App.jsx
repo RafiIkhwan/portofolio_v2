@@ -1,6 +1,13 @@
 import './App.css'
 import SelfPicture from '/img/self_jasjus_fixed.png'
 import Cloud from '/img/japanese_cloud_grayver.png'
+import Suxz from '/img/suxz.png'
+
+import { Swiper, SwiperSlide } from 'swiper/react'
+import { Pagination, Navigation } from 'swiper/modules'
+import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
 
 function App() {
 
@@ -79,7 +86,7 @@ function App() {
 				<div className=" flex flex-row justify-between space-x-20 w-full h-full">
 					<div className="relative flex justify-center items-center z-30">
 						<img className='object-contain max-w-2xl' src={Cloud} alt="cloud japanese background" />
-						<img className='object-cover object-top w-[480px] h-[700px] absolute bottom-0 z-30' src={SelfPicture} alt="my self picture" />
+						<img className='object-cover object-top w-[480px] h-[700px] absolute bottom-0 z-30 masked-pict' src={SelfPicture} alt="my self picture" />
 					</div>
 					<div className="flex flex-col justify-between static z-30">
 						<h1 className='text-8xl text-[#E0ECFF] font-bold'>About Me</h1>
@@ -107,6 +114,35 @@ function App() {
 							</ul>
 						</div>
 					</div>
+				</div>
+			</section>
+			<section id='project' className='container mx-auto h-screen overflow-hidden'>
+				<div className="flex flex-col justify-center">
+					<h1 className='flex justify-center font-bold text-7xl text-[#E0ECFF] py-7'>My Latest Project</h1>
+					<Swiper
+						slidesPerView={1}
+						spaceBetween={30}
+						loop={true}
+						pagination={{
+							clickable: true,
+						}}
+						navigation={true}
+						modules={[Pagination, Navigation]}
+						className='max-w-screen-2xl'
+					>
+						<SwiperSlide>
+							<div className="flex flex-col relative">
+								<img src={Suxz} className='masked-image' alt="ProjectImage.jpg" />
+								<div className="absolute bottom-0 p-10 z-10 flex flex-col">
+									<h5 className='font-bold text-7xl text-[#E0ECFF]'>Suxz</h5>
+									<p className='text-2xl text-[#E0ECFF]'>A Front-End Design Website challange from codedesign.dev</p>
+								</div>
+							</div>
+						</SwiperSlide>
+						<SwiperSlide className='flex items-center justify-center'><img src="https://placehold.co/1600x900?text=Page+2&font=montserrat" alt="" /></SwiperSlide>
+						<SwiperSlide className='flex items-center justify-center'><img src="https://placehold.co/1600x900?text=Page+3&font=montserrat" alt="" /></SwiperSlide>
+						<SwiperSlide className='flex items-center justify-center'><img src="https://placehold.co/1600x900?text=Page+4&font=montserrat" alt="" /></SwiperSlide>
+					</Swiper>
 				</div>
 			</section>
 		</div>

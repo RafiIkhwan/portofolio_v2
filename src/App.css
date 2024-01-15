@@ -33,3 +33,23 @@
   background: radial-gradient(circle, rgba(6, 24, 52, 0.5) 0%, rgba(23, 46, 84, 0.6) 5%, rgba(23, 46, 84, 0) 55%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#061834", endColorstr="#172e54", GradientType=1);
 }
+
+#img {
+  background-image: linear-gradient(hsl(var(--b1) / 0.9), hsl(var(--b2) / 0.5)), url(https://placehold.co/1600x900?text=Page+1&font=montserrat)
+}
+
+.masked-pict {
+  width: 100%;
+  height: 100%;
+  -webkit-mask-image: linear-gradient(rgba(255, 255, 255, 1) 80%, rgba(255, 255, 255, 0));
+  mask-image: linear-gradient(rgba(255, 255, 255, 1) 80%, rgba(255, 255, 255, 0));
+  mask-mode: alpha
+}
+
+.masked-image {
+  width: 100%;
+  height: 100%;
+  -webkit-mask-image: linear-gradient(rgba(255, 255, 255, 1) 60%, rgba(255, 255, 255, 0));
+  mask-image: linear-gradient(rgba(255, 255, 255, 1) 60%, rgba(255, 255, 255, 0));
+  mask-mode: alpha
+}
