@@ -22,6 +22,57 @@ export default function About() {
     setHover(null);
   };
 
+  const listConfig = [
+    {
+      id: 'mainSkillList',
+      items: [
+        { title: 'Front-End Design', content: 'I can easily transform psd or fig into code ! ', context: 0 },
+        { title: 'Back-End Operations', content: 'Expertly integrating coding languages and database management ', context: 0 },
+        { title: 'Web Architecture', content: 'Building Website from scratch ?, that’s my job ', context: 0 },
+      ],
+    },
+    {
+      id: 'langList',
+      items: [
+        { title: 'HTML', content: '', context: 1 },
+        { title: 'CSS', content: '', context: 1 },
+        { title: 'Javascript', content: '', context: 1 },
+        { title: 'PHP', content: '', context: 1 },
+        { title: 'Java', content: '', context: 1 },
+      ],
+    },
+    {
+      id: 'frameworkList',
+      items: [
+        { title: 'React.js', content: '', context: 2 },
+        { title: 'Laravel', content: '', context: 2 },
+        { title: 'Tailwind CSS', content: '', context: 2 },
+        { title: 'Next.js', content: '', context: 2 },
+        { title: 'Bootstrap', content: '', context: 2 },
+        { title: 'Redux.js', content: '', context: 2 },
+      ],
+    },
+    {
+      id: 'educationList',
+      items: [
+        { title: 'SMK Negeri 1 Cimahi', content: 'Computer Software Engineering', context: 3 },
+      ],
+    },
+  ];
+
+  const renderList = (config) => {
+    return config.map((list) => (
+      <ul
+        key={list.id}
+        className={`${activeLogic(list.items[0].context) ? 'opacity-100 z-10' : 'opacity-0 z-0'} flex mt-12 transition-opacity absolute top-12 gap-6 duration-150 ${list.items[0].context == 1 || list.items[0].context == 2 ? 'flex-row flex-wrap w-full rounded-sm' : 'flex-col'}`}
+        id={list.id}
+      >
+      {console.log(list.items[0].context == 0 && 'halodek')}
+        {list.items.map((item) => renderItem(item.title, item.content, item.context))}
+      </ul>
+    ));
+  };
+
   const CALL_SVG = {
     'HTML': <HTML />,
     'React.js': <React />,
@@ -96,33 +147,7 @@ export default function About() {
               {renderListItem(2, 'Framework')}
               {renderListItem(3, 'Education')}
             </ul>
-
-            <ul className={`${activeLogic(0) ? 'opacity-100 z-10' : 'opacity-0 z-0'} flex flex-col mt-12 transition-opacity absolute top-12 gap-6 duration-150`} id='mainSkillList'>
-              {renderItem('Front-End Design', 'I can easily transform psd or fig into code ! ', 0)}
-              {renderItem('Back-End Operations', 'Expertly integrating coding languages and database management ', 0)}
-              {renderItem('Web Architecture', 'Building Website from scratch ?, that’s my job ', 0)}
-            </ul>
-
-            <ul className={`${activeLogic(1) ? 'opacity-100 z-10' : 'opacity-0 z-0'} flex flex-row mt-12 transition-opacity absolute top-12 gap-6 duration-150 flex-wrap w-full rounded-sm`} id='langList'>
-              {renderItem('HTML', '', 1)}
-              {renderItem('CSS', '', 1)}
-              {renderItem('Javascript', '', 1)}
-              {renderItem('PHP', '', 1)}
-              {renderItem('Java', '', 1)}
-            </ul>
-
-            <ul className={`${activeLogic(2) ? 'opacity-100 z-10' : 'opacity-0 z-0'} flex flex-row mt-12 transition-opacity absolute top-12 gap-6 duration-150 flex-wrap w-full rounded-sm`} id='frameworkList'>
-              {renderItem('React.js', '', 2)}
-              {renderItem('Laravel', '', 2)}
-              {renderItem('Tailwind CSS', '', 2)}
-              {renderItem('Next.js', '', 2)}
-              {renderItem('Bootstrap', '', 2)}
-              {renderItem('Redux.js', '', 2)}
-            </ul>
-
-            <ul className={`${activeLogic(3) ? 'opacity-100 z-10' : 'opacity-0 z-0'} flex flex-col mt-12 transition-opacity absolute top-12 gap-6 duration-150`} id='educationList'>
-              {renderItem('SMK Negeri 1 Cimahi', 'Computer Software Engineering', 3)}
-            </ul>
+            {renderList(listConfig)}
           </div>
         </div>
       </div>
