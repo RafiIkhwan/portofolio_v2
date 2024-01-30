@@ -16,7 +16,27 @@
 
 #slogan {
   background-color: rgba(6, 24, 52, 0.06);
+} 
+
+
+::-webkit-scrollbar {
+  /* width: 10px;
+  height: 10px; */
+  display: none;
 }
+
+/* ::-webkit-scrollbar-track {
+  background: rgb(115,130,153);
+  background: -moz-linear-gradient(180deg, rgba(115,130,153,1) 0%, rgba(6,24,52,1) 100%);
+  background: -webkit-linear-gradient(180deg, rgba(115,130,153,1) 0%, rgba(6,24,52,1) 100%);
+  background: linear-gradient(180deg, rgba(115,130,153,1) 0%, rgba(6,24,52,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#738299",endColorstr="#061834",GradientType=1);
+} */
+
+/* ::-webkit-scrollbar-thumb {
+  background: #CCDBF2;
+  border-radius: 10px;
+} */
 
 .radial {
   background: rgb(6, 24, 52);
