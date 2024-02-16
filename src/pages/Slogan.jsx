@@ -3,7 +3,7 @@ export default function Slogan() {
     <section id='slogan' className="flex flex-row justify-around items-center h-[300px]">
       <ListSlogan title='INNOVATE' />
       <ListSlogan title='ELEVATE' />
-      <ListSlogan title='OPTIMIZE' />
+      <ListSlogan title='ELABORATE' />
     </section>
   )
 }

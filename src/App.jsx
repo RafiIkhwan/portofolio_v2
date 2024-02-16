@@ -1,8 +1,6 @@
 import './App.css'
-import SelfPicture from '/img/self_jasjus_fixed.png'
-import Cloud from '/img/japanese_cloud_grayver.png'
 import Suxz from '/img/suxz.png'
-import PHP from '/img/new-php-logo.png'
+import { SpeedInsights } from "@vercel/speed-insights/react"
 
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Pagination, Navigation } from 'swiper/modules'
@@ -19,43 +17,8 @@ import About from './pages/About'
 
 function App() {
 
-	const [view, setView] = useState(0);
-	const [hover, setHover] = useState(null);
-	const activeLogic = (x) => {
-		return ((view === x && !(view !== hover && hover !== null)) || hover === x)
-	};
-
-	const handleHover = (index) => {
-		setHover(index);
-	};
-
-	const handleItemClick = (index) => {
-		setView(index);
-		setHover(null);
-	};
-
-	const renderListItem = (index, label) => {
-		const isActive = view === index;
-		const isHovered = hover === index;
-
-		return (
-			<li
-				key={index}
-				className={`${isActive
-					? 'text-[#061834] bg-gradient-to-r from-[#061834] to-[#213b6671] bg-[length:100%_5px]'
-					: `text-[#E0ECFF] bg-gradient-to-r from-[#E0ECFF] to-[#E0ECFF] ${isHovered ? 'bg-[length:100%_5px] drop-shadow-3xl' : 'bg-[length:50%_5px]'}`
-					} bg-no-repeat bg-left-bottom transition-color duration-150 font text-3xl font-bold pb-3 cursor-pointer`}
-				onClick={() => handleItemClick(index)}
-				onMouseEnter={() => handleHover(index)}
-				onMouseLeave={() => handleHover(null)}
-			>
-				{label}
-			</li>
-		);
-	};
-
 	return (
-		<div className="bg-gradient-to-br from-[#E0ECFF] to-[#061834]">
+		<div className="bg-gradient-to-br from-[#E0ECFF] to-[#061834] selection:bg-white selection:bg-opacity-20">
 			{/* <div> */}
 			<Container id={'home'} customStyle={"pt-8 flex flex-col justify-between"}>
 				<Header />
@@ -112,6 +75,7 @@ function App() {
 					</Swiper>
 				</div>
 			</Container>
+			<SpeedInsights />
 		</div>
 	)
 }

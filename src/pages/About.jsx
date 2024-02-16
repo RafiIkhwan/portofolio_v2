@@ -1,5 +1,4 @@
 import { React, HTML, CSS, Javascript, PHP, Java, Laravel, TailwindCSS, Nextjs, Bootstrap, Redux } from '../assets/LangSVG'
-// import PHP from '/img/new-php-logo.png'
 import SelfPicture from '/img/self_jasjus_fixed.png'
 import Cloud from '/img/japanese_cloud_grayver.png'
 import { useState } from 'react';
@@ -60,35 +59,33 @@ export default function About() {
     },
   ];
 
-  const renderList = (config) => {
+  const renderListItem = (config) => {
     return config.map((list) => (
       <ul
         key={list.id}
         className={`${activeLogic(list.items[0].context) ? 'opacity-100 z-10' : 'opacity-0 z-0'} flex mt-12 transition-opacity absolute top-12 gap-6 duration-150 ${list.items[0].context == 1 || list.items[0].context == 2 ? 'flex-row flex-wrap w-full rounded-sm' : 'flex-col'}`}
         id={list.id}
       >
-      {console.log(list.items[0].context == 0 && 'halodek')}
         {list.items.map((item) => renderItem(item.title, item.content, item.context))}
       </ul>
     ));
   };
 
   const CALL_SVG = {
-    'HTML': <HTML />,
-    'React.js': <React />,
-    'HTML': <HTML />,
-    'CSS': <CSS />,
-    'Javascript': <Javascript />,
-    'PHP': <PHP />,
-    'Java': <Java />,
-    'Laravel': <Laravel />,
-    'Tailwind CSS': <TailwindCSS />,
-    'Next.js': <Nextjs />,
-    'Bootstrap': <Bootstrap />,
-    'Redux.js': <Redux />,
+    "HTML": <HTML />,
+    "React.js": <React />,
+    "CSS": <CSS />,
+    "Javascript": <Javascript />,
+    "PHP": <PHP />,
+    "Java": <Java />,
+    "Laravel": <Laravel />,
+    "Tailwind CSS": <TailwindCSS />,
+    "Next.js": <Nextjs />,
+    "Bootstrap": <Bootstrap />,
+    "Redux.js": <Redux />,
   }
 
-  const renderListItem = (index, label) => {
+  const renderList = (index, label) => {
     const isActive = view === index;
     const isHovered = hover === index;
 
@@ -98,7 +95,7 @@ export default function About() {
         className={`${isActive
           ? 'text-[#061834] bg-gradient-to-r from-[#061834] to-[#213b6671] bg-[length:100%_5px]'
           : `text-[#E0ECFF] bg-gradient-to-r from-[#E0ECFF] to-[#E0ECFF] ${isHovered ? 'bg-[length:100%_5px] drop-shadow-3xl' : 'bg-[length:50%_5px]'}`
-          } bg-no-repeat bg-left-bottom transition-color duration-150 font text-3xl font-bold pb-3 cursor-pointer`}
+          } bg-no-repeat bg-left-bottom transition-color duration-150 font text-2xl font-bold pb-3 cursor-pointer`}
         onClick={() => handleItemClick(index)}
         onMouseEnter={() => handleHover(index)}
         onMouseLeave={() => handleHover(null)}
@@ -111,7 +108,6 @@ export default function About() {
   const renderItem = (title, content, context) => {
 
     return (
-      // <ul className={`${activeLogic(context) ? 'opacity-100 z-10' : 'opacity-0 z-0'} flex flex-col mt-12 transition-opacity absolute top-12 gap-6 duration-150 ${context == 1 || context == 2 && 'flex-wrap w-full rounded-sm'}`} id={id}>
       <>
         {context == 1 || context == 2 ?
           <li className='transition-colors duration-200 flex flex-row items-center rounded-3xl text-[#061834] w-60 h-fit bg-gradient-to-r from-[#06183434] to-[#E0ECFF67] hover:cursor-pointer hover:bg-[#061834] hover:text-[#E0ECFF] drop-shadow'>
@@ -125,29 +121,28 @@ export default function About() {
           </li>
         }
       </>
-      // </ul >
     )
   }
 
   return (
     <>
-      <div className="radial-2 absolute bottom-20 left-20 h-full max-h-[1000px] max-w-[1000px] w-full rounded-full"></div>
+      <div className="radial absolute bottom-20 left-20 h-full max-h-[1000px] max-w-[1000px] w-full rounded-full select-none pointer-events-none"></div>
       <div className=" flex flex-row justify-between space-x-20 w-full h-full">
-        <div className="relative flex justify-center items-center z-30">
+        <div className="relative flex justify-center items-center z-30 select-none pointer-events-none">
           <img className='object-contain max-w-2xl' src={Cloud} alt="cloud japanese background" />
           <img className='object-cover object-top w-[480px] h-[700px] absolute bottom-0 z-30 masked-pict' src={SelfPicture} alt="my self picture" />
         </div>
         <div className="flex flex-col space-y-16 static z-30">
           <h1 className='text-8xl text-[#E0ECFF] font-bold'>About Me</h1>
-          <p className='text-3xl text-[#CCDBF2] tracking-wider'>Hi, my name is Rafi Ikhwan, i also known as Rafi. Based in Bandung, Indonesia. I’m enthusiast with Front End Developer. I can do a lot stuff like Back-End Operations, Mobile Development and 3D Design.</p>
+          <p className='text-3xl text-[#CCDBF2] tracking-wider leading-normal'>Hi, my name is Rafi Ikhwan, i also known as Rafi. Based in Bandung, Indonesia. I’m enthusiast with Front End Developer. I can do a lot stuff like Back-End Operations, Mobile Development and 3D Design.</p>
           <div className="flex flex-col min-h-72 relative">
             <ul className='flex flex-row space-x-10'>
-              {renderListItem(0, 'Main Skills')}
-              {renderListItem(1, 'Languages')}
-              {renderListItem(2, 'Framework')}
-              {renderListItem(3, 'Education')}
+              {renderList(0, 'Main Skills')}
+              {renderList(1, 'Languages')}
+              {renderList(2, 'Framework')}
+              {renderList(3, 'Education')}
             </ul>
-            {renderList(listConfig)}
+            {renderListItem(listConfig)}
           </div>
         </div>
       </div>
