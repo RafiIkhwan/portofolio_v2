@@ -1,6 +1,6 @@
 import { React, HTML, CSS, Javascript, PHP, Java, Laravel, TailwindCSS, Nextjs, Bootstrap, Redux } from '../assets/LangSVG'
-import SelfPicture from '/img/self_jasjus_fixed.png'
-import Cloud from '/img/japanese_cloud_grayver.png'
+import SelfPicture from '/img/SelfJasjusFixed.png'
+import Cloud from '/img/JapaneseCloudGrayver.png'
 import { useState } from 'react';
 
 export default function About() {

@@ -12,6 +12,7 @@ h1,h2,h3,h4,h5,h6,p,b,i::before {
 #root {
   color: #213B66;
   font-family: 'Titillium Web', sans-serif;
+  --swiper-theme-color: #fff;
 }
 
 #main {
@@ -69,7 +70,7 @@ h1,h2,h3,h4,h5,h6,p,b,i::before {
 .masked-image {
   width: 100%;
   height: 100%;
-  -webkit-mask-image: linear-gradient(rgba(255, 255, 255, 1) 70%, rgba(255, 255, 255, 0));
-  mask-image: linear-gradient(rgba(255, 255, 255, 1) 70%, rgba(255, 255, 255, 0));
+  -webkit-mask-image: linear-gradient(rgba(255, 255, 255, 1) 60%, rgba(255, 255, 255, 0));
+  mask-image: linear-gradient(rgba(255, 255, 255, 1) 60%, rgba(255, 255, 255, 0));
   mask-mode: alpha
 }

@@ -1,4 +1,4 @@
-import PHPimg from '/img/new-php-logo.png'
+import PHPimg from '/img/PHPLogo.png'
 
 export function React() {
   return (

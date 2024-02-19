@@ -1,5 +1,5 @@
-import SelfPicture from '/img/self_jasjus_fixed.png'
-import Cloud from '/img/japanese_cloud_grayver.png'
+import SelfPicture from '/img/SelfJasjusFixed.png'
+import Cloud from '/img/JapaneseCloudGrayver.png'
 
 export default function MainHome() {
   return (
