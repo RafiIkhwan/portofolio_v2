@@ -1,9 +1,3 @@
-// IMG PROJECT
-import Suxz from '/img/suxz.png'
-import SPPNextJs from '/img/sppNextJs.png'
-import PerpustakaanLaravel from '/img/perpustakaanLaravel.png'
-import FortekVite from '/img/fortekVite.png'
-
 // Swiper.js
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Pagination, Navigation } from 'swiper/modules'
@@ -13,41 +7,7 @@ import 'swiper/css/navigation';
 
 import { Github } from '../assets/MediaSocialSVG'
 
-export default function Project() {
-  const projectData = [
-    {
-      imageUrl: Suxz,
-      projectTitle: 'Suxz',
-      projectDescription: 'A Front-End Design Website challange from codedesign.dev',
-      projectUrl: 'https://fe-challange-suxz.vercel.app/',
-      githubUrl: 'https://github.com/RafiIkhwan/FE_challange_1',
-      builtWith: 'ReactJs and TailwindCSS'
-    },
-    {
-      imageUrl: SPPNextJs,
-      projectTitle: 'SPP Application',
-      projectDescription: 'SPP (Sumbangan Pembinaan Pendidikan) Website Applications to help staff in managing tuition fees payments',
-      projectUrl: '#',
-      githubUrl: 'https://github.com/nanandr/spp-nextjs',
-      builtWith: 'ReactJs, NextJs, TailwindCSS, Prisma and MySQL'
-    },
-    {
-      imageUrl: PerpustakaanLaravel,
-      projectTitle: 'E-Perpustakaan / E-Library',
-      projectDescription: 'A Laravel-based CMS library app simplifies content management and secure access to diverse resources for an enhanced user experience.',
-      projectUrl: '#',
-      githubUrl: 'https://github.com/RafiIkhwan/PerpustakaanLaravel9',
-      builtWith: 'Laravel, MySQL, and Bootstrap 5'
-    },
-    {
-      imageUrl: FortekVite,
-      projectTitle: 'FORTEK Website Profile',
-      projectDescription: 'FORTEK (Forum Iptek Pembangunan) website profile built with Vite, ReactJs, and TailwindCSS',
-      projectUrl: '#',
-      githubUrl: 'https://github.com/RafiIkhwan/PerpustakaanLaravel9',
-      builtWith: 'ReactJs, Vite and TailwindCSS'
-    },
-  ]
+export default function Project({ toggleModal, setView, projectData }) {
 
   return (
     <div className="flex flex-col justify-center h-full">
@@ -64,8 +24,11 @@ export default function Project() {
       >
         {projectData.map((data, i) => (
           <SwiperSlide key={i} className='drop-shadow-2xl'>
-            <div className="flex flex-col relative mx-40 transition-all hover:bg-opacity-50 hover:bg-[#061834] hover:cursor-pointer">
-              <img src={data.imageUrl} className='masked-image' alt="ProjectImage.jpg" />
+            <div onClick={() => {
+              toggleModal()
+              setView(i)
+            }} className="flex flex-col relative mx-40 transition-all hover:bg-opacity-50 hover:bg-[#061834] hover:cursor-pointer">
+              <img src={data.imageUrl[0]} className='masked-image' alt="ProjectImage.jpg" />
               <div className="absolute bottom-0 p-10 z-10 flex flex-col w-full space-y-3">
                 <h5 className='font-bold text-5xl text-[#E0ECFF]'>{data.projectTitle}</h5>
                 <div className="flex flex-row justify-between items-center text-[#E0ECFF]">

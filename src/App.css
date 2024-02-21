@@ -25,10 +25,15 @@ h1,h2,h3,h4,h5,h6,p,b,i::before {
 
 #slogan {
   background-color: rgba(6, 24, 52, 0.06);
-} 
+}
 
+/* 
+body {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+} */
 
-::-webkit-scrollbar {
+body::-webkit-scrollbar {
   /* width: 10px;
   height: 10px; */
   display: none;

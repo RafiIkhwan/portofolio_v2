@@ -93,7 +93,7 @@ export default function About() {
       <li
         key={index}
         className={`${isActive
-          ? 'text-[#061834] bg-gradient-to-r from-[#061834] to-[#213b6671] bg-[length:100%_5px]'
+          ? 'text-[#061834] bg-gradient-to-r from-[#061834] to-[#213b6671] bg-[length:100%_5px] drop-shadow-3xl'
           : `text-[#E0ECFF] bg-gradient-to-r from-[#E0ECFF] to-[#E0ECFF] ${isHovered ? 'bg-[length:100%_5px] drop-shadow-3xl' : 'bg-[length:50%_5px]'}`
           } bg-no-repeat bg-left-bottom transition-color duration-150 font text-2xl font-bold pb-3 cursor-pointer`}
         onClick={() => handleItemClick(index)}
@@ -110,7 +110,7 @@ export default function About() {
     return (
       <>
         {context == 1 || context == 2 ?
-          <li className='transition-colors duration-200 flex flex-row items-center rounded-3xl text-[#061834] w-60 h-fit bg-gradient-to-r from-[#06183434] to-[#E0ECFF67] hover:cursor-pointer hover:bg-[#061834] hover:text-[#E0ECFF] drop-shadow'>
+          <li className='transition-colors duration-200 flex flex-row items-center rounded-3xl text-[#061834] w-60 h-fit bg-gradient-to-r from-[#06183434] to-[#E0ECFF67] hover:cursor-pointer hover:bg-[#061834] hover:drop-shadow-2xl hover:text-[#E0ECFF] drop-shadow'>
             {CALL_SVG[title]}
             <h6 className='font-semibold text-3xl p-2 whitespace-nowrap'>{title}</h6>
           </li>
