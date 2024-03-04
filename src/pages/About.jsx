@@ -1,7 +1,8 @@
-import { React, HTML, CSS, Javascript, PHP, Java, Laravel, TailwindCSS, Nextjs, Bootstrap, Redux } from '../assets/LangSVG'
 import SelfPicture from '/img/SelfJasjusFixed.png'
 import Cloud from '/img/JapaneseCloudGrayver.png'
 import { useState } from 'react';
+import { listConfig } from '../utils/data';
+import { SVG_CALL } from '../utils/SVG_CALL';
 
 export default function About() {
 
@@ -21,69 +22,17 @@ export default function About() {
     setHover(null);
   };
 
-  const listConfig = [
-    {
-      id: 'mainSkillList',
-      items: [
-        { title: 'Front-End Design', content: 'I can easily transform psd or fig into code ! ', context: 0 },
-        { title: 'Back-End Operations', content: 'Expertly integrating coding languages and database management ', context: 0 },
-        { title: 'Web Architecture', content: 'Building Website from scratch ?, that’s my job ', context: 0 },
-      ],
-    },
-    {
-      id: 'langList',
-      items: [
-        { title: 'HTML', content: '', context: 1 },
-        { title: 'CSS', content: '', context: 1 },
-        { title: 'Javascript', content: '', context: 1 },
-        { title: 'PHP', content: '', context: 1 },
-        { title: 'Java', content: '', context: 1 },
-      ],
-    },
-    {
-      id: 'frameworkList',
-      items: [
-        { title: 'React.js', content: '', context: 2 },
-        { title: 'Laravel', content: '', context: 2 },
-        { title: 'Tailwind CSS', content: '', context: 2 },
-        { title: 'Next.js', content: '', context: 2 },
-        { title: 'Bootstrap', content: '', context: 2 },
-        { title: 'Redux.js', content: '', context: 2 },
-      ],
-    },
-    {
-      id: 'educationList',
-      items: [
-        { title: 'SMK Negeri 1 Cimahi', content: 'Computer Software Engineering', context: 3 },
-      ],
-    },
-  ];
-
   const renderListItem = (config) => {
     return config.map((list) => (
       <ul
         key={list.id}
-        className={`${activeLogic(list.items[0].context) ? 'opacity-100 z-10' : 'opacity-0 z-0'} flex mt-12 transition-opacity absolute top-12 gap-6 duration-150 ${list.items[0].context == 1 || list.items[0].context == 2 ? 'flex-row flex-wrap w-full rounded-sm' : 'flex-col'}`}
+        className={`${activeLogic(list.items[0].context) ? 'opacity-100 z-10' : 'opacity-0 z-0'} flex mt-12 transition-opacity absolute top-12 gap-6 duration-150 ${list.items[0].context != 0 ? 'flex-row flex-wrap w-full rounded-sm' : 'flex-col'}`}
         id={list.id}
       >
         {list.items.map((item) => renderItem(item.title, item.content, item.context))}
       </ul>
     ));
   };
-
-  const CALL_SVG = {
-    "HTML": <HTML />,
-    "React.js": <React />,
-    "CSS": <CSS />,
-    "Javascript": <Javascript />,
-    "PHP": <PHP />,
-    "Java": <Java />,
-    "Laravel": <Laravel />,
-    "Tailwind CSS": <TailwindCSS />,
-    "Next.js": <Nextjs />,
-    "Bootstrap": <Bootstrap />,
-    "Redux.js": <Redux />,
-  }
 
   const renderList = (index, label) => {
     const isActive = view === index;
@@ -109,9 +58,9 @@ export default function About() {
 
     return (
       <>
-        {context == 1 || context == 2 ?
-          <li className='transition-colors duration-200 flex flex-row items-center rounded-3xl text-[#061834] w-60 h-fit bg-gradient-to-r from-[#06183434] to-[#E0ECFF67] hover:cursor-pointer hover:bg-[#061834] hover:drop-shadow-2xl hover:text-[#E0ECFF] drop-shadow'>
-            {CALL_SVG[title]}
+        {context != 0 ?
+          <li className='transition-colors duration-200 flex flex-row items-center rounded-3xl text-[#061834] w-60 h-fit bg-gradient-to-r from-[#06183434] to-[#E0ECFF67] hover:cursor-pointer hover:bg-[#061834] hover:drop-shadow-2xl hover:text-[#E0ECFF] drop-shadow group'>
+            {SVG_CALL[title]}
             <h6 className='font-semibold text-3xl p-2 whitespace-nowrap'>{title}</h6>
           </li>
           :
@@ -140,7 +89,8 @@ export default function About() {
               {renderList(0, 'Main Skills')}
               {renderList(1, 'Languages')}
               {renderList(2, 'Framework')}
-              {renderList(3, 'Education')}
+              {renderList(3, 'Database')}
+              {renderList(4, 'Tools & Other')}
             </ul>
             {renderListItem(listConfig)}
           </div>

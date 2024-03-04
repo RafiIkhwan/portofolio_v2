@@ -22,7 +22,7 @@ export default function Modal({ open, onClose, projectData, customStyle }) {
             <h1 className="font-extrabold text-9xl uppercase">{projectData.projectTitle}</h1>
             <a href="https://github.com/rafiikhwan" className="flex self-center items-center space-x-2">
               <img src="https://github.com/rafiikhwan.png" alt="Profile.png" className="object-cover w-10 h-10 rounded-full" />
-              <p className="relative inline-block text-2xl font-semibold bg-gradient-to-r from-[#061834] to-[#061834] bg-[length:0%_1.6px] hover:bg-[length:100%_1.6px] bg-no-repeat bg-left-bottom transition-color duration-300">
+              <p className="relative inline-block text-2xl font-semibold bg-gradient-to-r from-[#061834] to-[#061834] bg-[length:0%_1.6px] hover:bg-[length:100%_1.6px] bg-no-repeat bg-left-bottom transition-color duration-300 hover:">
                 Rafi Ikhwan
                 <span class="absolute inset-x-0 bottom-0 h-[1.6px] bg-gradient-to-r from-[#061834]/20 to-[#061834]/20 transition-all duration-400 group-hover:from-transparent"></span>
               </p>

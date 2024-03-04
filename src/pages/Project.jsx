@@ -10,7 +10,7 @@ import { Github } from '../assets/MediaSocialSVG'
 export default function Project({ toggleModal, setView, projectData }) {
 
   return (
-    <div className="flex flex-col justify-center h-full">
+    <div className="flex flex-col justify-center h-full py-16">
       <h1 className='flex justify-center font-bold text-7xl text-[#E0ECFF] pb-10'>My Latest Project</h1>
       <Swiper
         slidesPerView={1}
@@ -23,12 +23,12 @@ export default function Project({ toggleModal, setView, projectData }) {
         className='max-w-screen-2xl text-white'
       >
         {projectData.map((data, i) => (
-          <SwiperSlide key={i} className='drop-shadow-2xl'>
+          <SwiperSlide key={i} className='drop-shadow-2xl rounded-xl'>
             <div onClick={() => {
               toggleModal()
               setView(i)
-            }} className="flex flex-col relative mx-40 transition-all hover:bg-opacity-50 hover:bg-[#061834] hover:cursor-pointer">
-              <img src={data.imageUrl[0]} className='masked-image' alt="ProjectImage.jpg" />
+            }} className="flex flex-col relative mx-40 transition-all hover:bg-opacity-50 hover:bg-[#061834] hover:cursor-pointer rounded-xl">
+              <img src={data.imageUrl[0]} className='masked-image rounded-xl' alt="ProjectImage.jpg" />
               <div className="absolute bottom-0 p-10 z-10 flex flex-col w-full space-y-3">
                 <h5 className='font-bold text-5xl text-[#E0ECFF]'>{data.projectTitle}</h5>
                 <div className="flex flex-row justify-between items-center text-[#E0ECFF]">

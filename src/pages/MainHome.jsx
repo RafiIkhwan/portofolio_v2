@@ -3,7 +3,7 @@ import Cloud from '/img/JapaneseCloudGrayver.png'
 
 export default function MainHome() {
   return (
-    <main className='relative my-16' id='main'>
+    <main className='relative mt-16' id='main'>
       <div className="absolute w-full bottom-72 z-20 sm:block hidden">
         <div className="flex flex-row justify-between h-[calc(100vh-550px)] max-h-[500px]">
           <div className="flex flex-col justify-between text-start">
