@@ -1,7 +1,7 @@
 import { camelCaseFormat, dateTimeFormat } from "../utils/format";
 import Logo from "/img/LogoWithoutNameUpScale.png"
 
-export default function Modal({ open, onClose, projectData, customStyle }) {
+export default function Modal({ open, onClose, projectData, ref, customStyle }) {
   return (
     <div onClick={onClose} className={`fixed inset-0 flex justify-center items-end transition-colors z-[100] ${open ? 'visible bg-black/20' : 'invisible'} pt-10`}>
       <div onClick={(e) => e.stopPropagation()} className={`bg-gray-100 rounded-t-2xl drop-shadow-md transition-all duration-300 ${open ? 'h-[calc(100vh-40px)] opacity-100' : 'h-0 opacity-0'} w-screen`}>
@@ -16,30 +16,30 @@ export default function Modal({ open, onClose, projectData, customStyle }) {
             </svg>
           </button>
         </div>
-        <div id="modal" className="overflow-y-scroll h-full max-h-[calc(100vh-115px)]">
+        <div ref={ref} id="modal" className="overflow-y-scroll h-full max-h-[calc(100vh-115px)]">
           <div className="flex flex-col gap-y-5 text-center py-10 max-w-6xl mx-auto">
             <p className="text-[#061834]">{dateTimeFormat(projectData.date)}</p>
-            <h1 className="font-extrabold text-9xl uppercase">{projectData.projectTitle}</h1>
+            <h1 className="font-extrabold lg:text-9xl md:text-6xl text-3xl uppercase">{projectData.projectTitle}</h1>
             <a href="https://github.com/rafiikhwan" className="flex self-center items-center space-x-2">
-              <img src="https://github.com/rafiikhwan.png" alt="Profile.png" className="object-cover w-10 h-10 rounded-full" />
-              <p className="relative inline-block text-2xl font-semibold bg-gradient-to-r from-[#061834] to-[#061834] bg-[length:0%_1.6px] hover:bg-[length:100%_1.6px] bg-no-repeat bg-left-bottom transition-color duration-300 hover:">
+              <img src="https://github.com/rafiikhwan.png" alt="Profile.png" className="object-cover md:w-10 w-8 md:h-10 h-8 rounded-full" />
+              <p className="relative inline-block lg:text-2xl md:text-xl text-lg font-semibold bg-gradient-to-r from-[#061834] to-[#061834] bg-[length:0%_1.6px] hover:bg-[length:100%_1.6px] bg-no-repeat bg-left-bottom transition-color duration-300 hover:">
                 Rafi Ikhwan
                 <span class="absolute inset-x-0 bottom-0 h-[1.6px] bg-gradient-to-r from-[#061834]/20 to-[#061834]/20 transition-all duration-400 group-hover:from-transparent"></span>
               </p>
             </a>
           </div>
-          <div className="flex flex-col gap-y-20 mb-36 mx-12">
+          <div className="flex flex-col md:gap-y-20 gap-y-10 mb-36 mx-12">
             <Wrapper img={projectData.imageUrl[0]} />
             <Wrapper img={projectData.imageUrl[1]} />
             <Wrapper img={projectData.imageUrl[2]} />
           </div>
-          <div className="flex flex-col gap-y-36 bg-white py-20 px-12">
+          <div className="flex flex-col md:gap-y-36 gap-y-20 bg-white py-20 px-12">
             <div className="flex flex-col gap-y-2">
               <h1 className="text-[#061834] py-5">Description</h1>
-              <p className="text-3xl text-[#061834]">{projectData.projectDescription}</p>
+              <p className="md:text-3xl text-xl text-[#061834]">{projectData.projectDescription}</p>
             </div>
           </div>
-          <div className="flex flex-col gap-y-36 bg-white py-20 px-12">
+          <div className="flex flex-col md:gap-y-36 gap-y-20 bg-white py-20 px-12">
             {Object.keys(projectData.builtWith).map((key, index) => (
               <div key={index} className="flex flex-col gap-y-8">
                 <p className="font-semibold border-dashed border-b border-[#213B66]/40 text-[#061834] py-5">{camelCaseFormat(key)}</p>
@@ -70,7 +70,7 @@ export default function Modal({ open, onClose, projectData, customStyle }) {
 
 function Wrapper({ img }) {
   return (
-    <div className="bg-gradient-to-br from-[#213B66] to-[#061834] rounded-xl p-20">
+    <div className="bg-gradient-to-br from-[#213B66] to-[#061834] rounded-xl md:p-20">
       <img src={img} alt="" className="rounded-xl drop-shadow-2xl" />
     </div>
   )
