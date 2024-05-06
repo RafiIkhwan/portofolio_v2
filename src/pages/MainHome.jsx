@@ -5,7 +5,7 @@ export default function MainHome() {
   return (
     <main className='relative lg:mt-16' id='main'>
       <div className="absolute w-full bottom-72 z-20 md:block hidden">
-        <div className="flex flex-row justify-between h-[calc(100vh-550px)] max-h-[500px] w-[calc(100vw-100px)] mx-auto lg:w-full">
+        <div className="flex flex-row justify-between h-[calc(100vh-550px)] max-h-[500px] mx-auto lg:w-full">
           <div className="flex flex-col justify-between text-start">
             <h1 className='font-black text-2xl sm:text-4xl lg:text-6xl xl:text-7xl 2xl:text-8xl'>SOFTWARE</h1>
             <p className='font-semibold text-2xl xl:text-4xl'>Currently study at <p className='font-bold'>SMKN 1 Cimahi</p></p>
