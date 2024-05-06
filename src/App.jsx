@@ -23,18 +23,8 @@ function App() {
 
   const [modal, setModal] = useState(false)
   const [view, setView] = useState(0)
-  const [data, setData] = useState('')
 
   const modalElement = document.getElementById('modal')
-  
-  useEffect(() => {
-    fetch('https://pokeapi.co/api/v2/pokemon/')
-    .then(
-      res => setData(res.results) 
-    )
-  },[])
-
-  console.log(data);
 
   if (modal) {
     disableBodyScroll(document)

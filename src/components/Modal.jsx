@@ -29,9 +29,9 @@ export default function Modal({ open, onClose, projectData, ref, customStyle }) 
             </a>
           </div>
           <div className="flex flex-col md:gap-y-20 gap-y-10 mb-36 mx-12">
-            <Wrapper img={projectData.imageUrl[0]} />
-            <Wrapper img={projectData.imageUrl[1]} />
-            <Wrapper img={projectData.imageUrl[2]} />
+          {projectData.imageUrl.slice(0, 3).map((url, index) => (
+            <Wrapper key={index} img={url} />
+          ))}
           </div>
           <div className="flex flex-col md:gap-y-36 gap-y-20 bg-white py-20 px-12">
             <div className="flex flex-col gap-y-2">
