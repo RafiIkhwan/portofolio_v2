@@ -23,7 +23,7 @@ import PerpustakaanLaravel_2 from './img/PerpustakaanLaravel_2.png'
 import PerpustakaanLaravel_3 from './img/PerpustakaanLaravel_3.png'
 import PerpustakaanLaravel_4 from './img/PerpustakaanLaravel_4.png'
 import PerpustakaanLaravel_5 from './img/PerpustakaanLaravel_5.png'
-import PerpustakaanLaravel_Login from './img/perpustakaanLaravel_Login.png'
+import PerpustakaanLaravel_Login from './img/PerpustakaanLaravel_Login.png'
 
 import FortekVite from './img/fortekVite.png'
 
