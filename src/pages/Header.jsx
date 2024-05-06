@@ -1,5 +1,5 @@
 import { Facebook, Github, Instagram, LinkedIn } from "../assets/MediaSocialSVG";
-import Logo from "/img/LogoWithoutNameUpScale.png"
+import Logo from "../utils/img/LogoWithoutNameUpScale.png"
 
 export default function Header() {
   return (

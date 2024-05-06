@@ -1,5 +1,5 @@
-import SelfPicture from '/img/SelfJasjusFixed.png'
-import Cloud from '/img/JapaneseCloudGrayver.png'
+import SelfPicture from '../utils/img/SelfJasjusFixed.png'
+import Cloud from '../utils/img/JapaneseCloudGrayver.png'
 import { useState } from 'react';
 import { listConfig } from '../utils/data';
 import { SVG_CALL } from '../utils/SVG_CALL';

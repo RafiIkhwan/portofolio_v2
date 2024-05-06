@@ -1,5 +1,5 @@
 import { camelCaseFormat, dateTimeFormat } from "../utils/format";
-import Logo from "/img/LogoWithoutNameUpScale.png"
+import Logo from "../utils/img/LogoWithoutNameUpScale.png"
 
 export default function Modal({ open, onClose, projectData, ref, customStyle }) {
   return (
