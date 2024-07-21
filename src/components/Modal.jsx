@@ -43,7 +43,7 @@ export default function Modal({ open, onClose, projectData, ref, customStyle }) 
             {Object.keys(projectData.builtWith).map((key, index) => (
               <div key={index} className="flex flex-col gap-y-8">
                 <p className="font-semibold border-dashed border-b border-[#213B66]/40 text-[#061834] py-5">{camelCaseFormat(key)}</p>
-                <div className="flex flex-row gap-x-3">
+                <div className="flex flex-row gap-3 flex-wrap">
                   {Object.entries(projectData.builtWith).map((e, i) => {
                     if (e[0] == key) {
                       return e[1].map((list, o) => (
@@ -71,7 +71,7 @@ export default function Modal({ open, onClose, projectData, ref, customStyle }) 
 function Wrapper({ img }) {
   return (
     <div className="bg-gradient-to-br from-[#213B66] to-[#061834] rounded-xl md:p-20">
-      <img src={img} alt="" className="rounded-xl drop-shadow-2xl" />
+      <img src={img} alt="" className="rounded-xl drop-shadow-2xl w-full" />
     </div>
   )
 }
