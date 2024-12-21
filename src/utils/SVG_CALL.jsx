@@ -1,4 +1,4 @@
-import { React, HTML, CSS, Javascript, PHP, Java, Laravel, TailwindCSS, Nextjs, Bootstrap, Redux, MySQL, Prisma, VsCode, Figma } from '../assets/LangSVG'
+import { React, HTML, CSS, Javascript, PHP, Java, Laravel, TailwindCSS, Nextjs, Bootstrap, Redux, Hono, MySQL, Prisma, VsCode, Figma, NodeJs, Bun, PostgreSQL, MongoDB, Git } from '../assets/LangSVG'
 
 export const SVG_CALL = {
     "HTML": <HTML />,
@@ -12,8 +12,14 @@ export const SVG_CALL = {
     "Next.js": <Nextjs />,
     "Bootstrap": <Bootstrap />,
     "Redux.js": <Redux />,
+    "Hono": <Hono />,
     "MySQL": <MySQL />,
+    "PostgreSQL": <PostgreSQL />,
+    "MongoDB": <MongoDB />,
     "Prisma": <Prisma />,
     "VsCode": <VsCode />,
-    "Figma": <Figma />
+    "Figma": <Figma />,
+    "Node.js": <NodeJs />,
+    "Bun": <Bun />,
+    "Git": <Git />,
   }

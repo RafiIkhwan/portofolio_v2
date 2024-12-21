@@ -1,4 +1,4 @@
-import SelfPicture from '../utils/img/SelfJasjusFixed.png'
+import SelfPicture from '../utils/img/selfbara.png'
 import Cloud from '../utils/img/JapaneseCloudGrayver.png'
 import { useState } from 'react';
 import { listConfig } from '../utils/data';
@@ -83,7 +83,9 @@ export default function About() {
         </div>
         <div className="flex flex-col space-y-8 md:space-y-16 z-30">
           <h1 className='lg:text-8xl md:text-6xl text-3xl text-[#E0ECFF] font-bold'>About Me</h1>
-          <p className='lg:text-3xl md:text-2xl text-[#CCDBF2] tracking-wider leading-normal text-justify md:mr-20'>Hi, my name is Rafi Ikhwan, i also known as Rafi. Based in Bandung, Indonesia. I’m enthusiast with Front End Developer. I can do a lot stuff like Back-End Operations, Mobile Development and 3D Design.</p>
+          <p className='lg:text-3xl md:text-2xl text-[#CCDBF2] tracking-wider leading-normal text-justify md:mr-20'>
+          Hi, my name is Rafi Ikhwan, often called Rafi. Based in Bandung, Indonesia, I am proficient as a Full Stack Engineer, with a strong focus on Front-End Development and solid skills in Back-End Operations.
+          </p>
           <div className="hidden sm:flex flex-col min-h-72 relative">
             <ul className='flex flex-row space-x-10'>
               {renderList(0, 'Main Skills')}
