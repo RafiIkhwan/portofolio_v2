@@ -1,6 +1,6 @@
-export default function Container({ id, customStyle, children }) {
+export default function Container({ refs, id, customStyle, children }) {
   return (
-    <section id={id} className={`container mx-auto ${customStyle}`}>
+    <section ref={refs} id={id} className={`px-32 w-screen overflow-hidden ${customStyle}`}>
       { children }
     </section>
   )
