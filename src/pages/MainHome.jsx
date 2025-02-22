@@ -1,4 +1,4 @@
-import SelfPicture from '../utils/img/selfbara.png'
+import SelfPicture from '../utils/img/selfprofessional.png'
 import Cloud from '../utils/img/JapaneseCloudGrayver.png'
 
 export default function MainHome() {
@@ -24,9 +24,9 @@ export default function MainHome() {
       </div>
       <div className="flex flex-row justify-center relative mb-auto h-screen box-border max-h-[500px] md:max-h-[850px] select-none pointer-events-none">
         <p className='font-bold text-2xl absolute z-30 top-10 text-[#E0ECFF] select-text uppercase' id='webdev'>{user_detail.role.toLowerCase()}</p>
-        <img className='object-contain static z-[19] xl:max-w-5xl' src={Cloud} alt="cloud japanese background" />
+        <img className='object-contain static z-[19] xl:max-w-5xl opacity-30' src={Cloud} alt="cloud japanese background" />
         <div className="radial absolute bottom-14 h-full max-h-[1200px] max-w-[1200px] w-full rounded-full"></div>
-        <img className='object-cover object-top w-[700px] md:h-[660px] h-[350px] absolute bottom-0 z-30' src={SelfPicture} alt="my self picture" />
+        <img className='object-cover object-top w-[710px] md:h-[660px] h-[350px] absolute bottom-0 z-30' src={SelfPicture} alt="my self picture" />
       </div>
     </main>
   )

@@ -1,4 +1,4 @@
-import SelfPicture from '../utils/img/selfbara.png'
+import SelfPicture from '../utils/img/selfprofessional.png'
 import Cloud from '../utils/img/JapaneseCloudGrayver.png'
 import { useState } from 'react';
 import { listConfig } from '../utils/data';
@@ -78,7 +78,7 @@ export default function About() {
       <div className="radial 2xl:block hidden absolute bottom-20 left-20 h-full max-h-[1000px] max-w-[1000px] w-full rounded-full select-none pointer-events-none"></div>
       <div className=" flex flex-row justify-between w-[calc(100vw-80px)] mx-auto md:space-x-20 md:w-full h-full">
         <div className="relative hidden 2xl:flex justify-center items-center z-30 select-none pointer-events-none">
-          <img className='object-contain max-w-2xl' src={Cloud} alt="cloud japanese background" />
+          <img className='object-contain max-w-2xl opacity-30' src={Cloud} alt="cloud japanese background" />
           <img className='object-cover object-top w-[480px] h-[700px] absolute bottom-0 z-30 masked-pict' src={SelfPicture} alt="my self picture" />
         </div>
         <div className="flex flex-col space-y-8 md:space-y-16 z-30">

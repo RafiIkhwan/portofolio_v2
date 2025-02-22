@@ -4,7 +4,8 @@ import { Pagination, Navigation } from 'swiper/modules'
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
-
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 import { Github } from '../assets/MediaSocialSVG'
 
 export default function Project({ toggleModal, setView, projectData }) {
@@ -28,7 +29,12 @@ export default function Project({ toggleModal, setView, projectData }) {
               toggleModal()
               setView(i)
             }} className="flex flex-col relative lg:mx-40 md:mx-14 transition-all hover:bg-opacity-50 hover:bg-[#061834] hover:cursor-pointer rounded-xl">
-              <img src={data.imageUrl[0]} className='masked-image rounded-xl aspect-video object-cover' alt="ProjectImage.jpg" />
+              <LazyLoadImage 
+                src={data.imageUrl[0]}
+                effect="blur" 
+                className='masked-image rounded-xl aspect-video object-cover' 
+                alt="ProjectImage.jpg" 
+              />
               <div className="absolute bottom-0 p-10 z-10 md:flex flex-col w-full lg:space-y-3 hidden">
                 <h5 className='font-bold md:text-3xl lg:text-5xl text-[#E0ECFF]'>{data.projectTitle}</h5>
                 <div className="flex flex-row justify-between items-center text-[#E0ECFF]">
