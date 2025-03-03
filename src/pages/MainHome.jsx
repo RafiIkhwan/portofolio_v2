@@ -4,7 +4,7 @@ import Cloud from '../utils/img/JapaneseCloudGrayver.png'
 export default function MainHome() {
   const user_detail = {
     status: "Working",
-    status_place: "PT Bara Prima Multi Teknovasi",
+    status_place: "PT Jaya Integrasi Nusantara",
     user_name: "Rafi Ikhwan",
     role: "Web Developer"
   }
