@@ -1,4 +1,4 @@
-import SelfPicture from "../utils/img/selfbara.png";
+import SelfPicture from "../utils/img/selfprofessional.png";
 import Cloud from "../utils/img/JapaneseCloudGrayver.png";
 import { motion } from "motion/react";
 
@@ -113,7 +113,7 @@ export default function MainHome() {
 						delay: 0.3,
 						ease: [0, 0.71, 0.2, 1.01],
 					}}
-					className="object-contain static z-[19] xl:max-w-5xl"
+					className="object-contain static z-[19] xl:max-w-5xl opacity-30"
 					src={Cloud}
 					alt="cloud japanese background"
 				/>
@@ -127,7 +127,7 @@ export default function MainHome() {
 					}}
 					className="radial absolute bottom-14 h-full max-h-[1200px] max-w-[1200px] w-full rounded-full"
 				/>
-				<img className="object-cover object-top w-[700px] md:h-[660px] h-[350px] absolute bottom-0 z-30" src={SelfPicture} alt="my self picture" />
+				<img className="object-cover object-top w-[710px] md:h-[660px] h-[350px] absolute bottom-0 z-30" src={SelfPicture} alt="my self picture" />
 			</div>
 		</main>
 	);

@@ -1,4 +1,4 @@
-import SelfPicture from "../utils/img/selfbara.png";
+import SelfPicture from "../utils/img/selfprofessional.png";
 import Cloud from "../utils/img/JapaneseCloudGrayver.png";
 import { Fragment, useState } from "react";
 import { listConfig } from "../utils/data";
@@ -72,7 +72,7 @@ export default function About() {
 							delay: 0.3,
 							ease: [0, 0.71, 0.2, 1.01],
 						}}
-						className="object-contain max-w-2xl"
+						className="object-contain max-w-2xl opacity-30"
 						src={Cloud}
 						alt="cloud japanese background"
 					/>

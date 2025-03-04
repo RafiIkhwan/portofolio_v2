@@ -111,5 +111,5 @@ body::-webkit-scrollbar {
 
 .ellipsis::after {
   content: "Loading Portfolio";
-  animation: ellipsis 1.5s infinite;
+  animation: ellipsis 2.5s infinite;
 }

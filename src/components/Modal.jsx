@@ -1,5 +1,7 @@
 import { camelCaseFormat, dateTimeFormat } from "../utils/format";
 import Logo from "../utils/img/LogoWithoutNameUpScale.png";
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 
 export default function Modal({ open, onClose, projectData, ref, customStyle }) {
 	return (
@@ -71,9 +73,14 @@ export default function Modal({ open, onClose, projectData, ref, customStyle }) 
 }
 
 function Wrapper({ img }) {
-	return (
-		// <div className="bg-gradient-to-br from-blue to-dark-blue rounded-xl md:p-20">
-		<img src={img} alt="" className="rounded-xl drop-shadow-2xl w-full" />
-		// </div>
-	);
+  return (
+    // <div className="bg-gradient-to-br from-[#213B66] to-[#061834] rounded-xl md:p-20">
+      <LazyLoadImage
+        alt="Project Image"
+        src={img}
+        effect="blur"
+        className="rounded-xl drop-shadow-2xl w-full"
+      />
+    // </div>
+  )
 }

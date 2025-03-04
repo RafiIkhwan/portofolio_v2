@@ -48,6 +48,7 @@ import FortekVite from './img/fortekVite.png'
 
 export const projectData = [
     {
+      projectId: 'temansehat',
       imageUrl: [TemanSehat, TemanSehat_1, TemanSehat_2, TemanSehat_3],
       projectTitle: 'Teman Sehat',
       projectDescription: 'Teman Sehat is a freelance project and innovative e-commerce platform offering quality health products, including medicines, supplements, and medical devices. Partnering with trusted pharmacies and manufacturers, Teman Sehat ensures safe, effective, and high-quality products at competitive prices, delivered right to your doorstep.',
@@ -62,6 +63,7 @@ export const projectData = [
       date: '2024-12-20',
     },
     {
+      projectId: 'legalplus',
       imageUrl: [LegalPlus_1, LegalPlus_2, LegalPlus_3, LegalPlus_4, LegalPlus_5, LegalPlus_6, LegalPlus_7],
       projectTitle: 'Legal Plus',
       projectDescription: 'Cloud-based law practice management software designed specifically for law firms in Indonesia to help lawyers run their practices more efficiently',
@@ -76,6 +78,7 @@ export const projectData = [
       date: '2024-07-30',
     },
     {
+      projectId: 'sisfobekangad',
       imageUrl: [BekangAD_2, BekangAD_3, BekangAD_4, BekangAD_5],
       projectTitle: 'SisfoBekangAD',
       projectDescription: 'SISFOBEKANGAD (Sistem Informasi Pembekalan Angkutan TNI AD) is a comprehensive application designed to streamline the management of combat logistics for the Indonesian Army. It enhances operational efficiency through integrated, real-time data processing and supports mission readiness in all conditions.',
@@ -90,6 +93,7 @@ export const projectData = [
       date: '2024-05-28',
     },
     {
+      projectId: 'suxz',
       imageUrl: [Suxz_1, Suxz_2, Suxz_3, Suxz_4, Suxz_5, Suxz_6, Suxz_7],
       projectTitle: 'Suxz',
       projectDescription: 'A Front-End Design Website challange from codedesign.dev',
@@ -103,6 +107,7 @@ export const projectData = [
       date: '2024-02-20',
     },
     {
+      projectId: 'sppapplication',
       imageUrl: [SPPNextJs, SPPNextJs_1, SPPNextJs_2, SPPNextJs_3, SPPNextJs_4, SPPNextJs_5, SPPNextJs_6, SPPNextJs_7, SPPNextJs_8],
       projectTitle: 'SPP Application',
       projectDescription: 'SPP (Sumbangan Pembinaan Pendidikan) Website Applications to help staff in managing tuition fees payments',
@@ -117,6 +122,7 @@ export const projectData = [
       date: '2023-12-07',
     },
     // {
+      //   projectId: 'e-perpustakaan/e-library',
     //   imageUrl: [PerpustakaanLaravel, PerpustakaanLaravel_1, PerpustakaanLaravel_2, PerpustakaanLaravel_3, PerpustakaanLaravel_4, PerpustakaanLaravel_5, PerpustakaanLaravel_Login],
     //   projectTitle: 'E-Perpustakaan / E-Library',
     //   projectDescription: 'A Laravel-based CMS library app simplifies content management and secure access to diverse resources for an enhanced user experience.',
@@ -131,6 +137,7 @@ export const projectData = [
     //   date: '2023-06-23',
     // },
     // {
+      //   projectId: 'fortekwebsiteprofile',
     //   imageUrl: [FortekVite],
     //   projectTitle: 'FORTEK Website Profile',
     //   projectDescription: 'FORTEK (Forum Iptek Pembangunan) website profile built with Vite, ReactJs, and TailwindCSS',

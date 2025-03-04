@@ -10,6 +10,5 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     <Suspense fallback={<Loading />}>
       <App />
     </Suspense>
-    {/* <Loading /> */}
   </React.StrictMode>
 )
