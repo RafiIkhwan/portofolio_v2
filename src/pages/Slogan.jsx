@@ -10,6 +10,6 @@ export default function Slogan() {
 
 function ListSlogan({ title }) {
   return (
-    <h2 className='text-[#CCDBF2] font-bold md:text-4xl lg:text-6xl'>{title}</h2>
+    <h2 className='text-light-blue font-bold md:text-4xl lg:text-6xl'>{title}</h2>
   )
 }

@@ -59,7 +59,7 @@ function App() {
 	return (
 		<div className={`bg-gradient-to-br from-background-from to-background-to selection:bg-white selection:bg-opacity-20 relative min-h-screen`}>
 			<Sidebar />
-			<Container refs={sectionRefs.home} id={"home"} customStyle={"pt-8 flex flex-col md:justify-between md:h-screen overflow-y-hidden max-h-screen"}>
+			<Container refs={sectionRefs.home} id={"home"} customStyle={"pt-8 flex flex-col md:justify-between md:h-screen overflow-y-hidden max-h-screen bg-lightest-gray"}>
 				<Header activeSection={activeSection} />
 				<MainHome />
 			</Container>

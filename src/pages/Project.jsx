@@ -29,7 +29,7 @@ export default function Project({ toggleModal, setView, projectData }) {
 								toggleModal();
 								setView(i);
 							}}
-							className="flex flex-col relative lg:mx-40 md:mx-14 transition-all hover:bg-opacity-50 hover:bg-dark-blue hover:cursor-pointer rounded-xl"
+							className="flex flex-col relative lg:mx-40 md:mx-14 transition-all hover:bg-opacity-50 hover:bg-black hover:cursor-pointer rounded-xl"
 						>
 							<LazyLoadImage 
                 src={data.imageUrl[0]}
