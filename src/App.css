@@ -1,8 +1,52 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;900&family=Titillium+Web:wght@400;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@700&display=swap');
 
+:root {
+  --black: #181818;
+  --white: #F8F8F8;
+  --light-blue: #CCDBF2;
+  --blue: #213B66;
+  --dark-blue: #061834;
+  --light-dark-blue: #213b6671;
+  --lightest-gray: #f3f4f64d;
+  --light-gray: #f3f4f6;
+  --gray: #d1d1d1;
+  --background-from: #CCDBF2;
+  --background-to: #061834;
+  --wrap-background: #0618340c;
+  --item-background-from : #06183434;
+  --item-background-to : #E0ECFF67;
+  --radial-blue-1: #061834;
+  --radial-blue-1-alpha-50: #06183480;
+  --radial-blue-2: #172e54;
+  --radial-blue-2-alpha-60: #172e5499;
+  --radial-blue-2-alpha-0: #172e5400;
+}
+
+.dark {
+  --black: #181818;
+  --white: #181818;
+  --light-blue: #acacac;
+  --blue: #aaa;
+  --dark-blue: #BBBFC2;
+  --light-dark-blue: #5c5c5c;
+  --lightest-gray: #7e7e7e4d;
+  --light-gray: #1e1e1e;
+  --gray: #6d6d6d;
+  --background-from: #212121;
+  --background-to: #252525;
+  --wrap-background: #8d8d8d0f;
+  --item-background-from : #55555567;
+  --item-background-to : #5c5c5c;
+  --radial-blue-1: #b0b0b0;
+  --radial-blue-1-alpha-50: #b0b0b080;
+  --radial-blue-2: #888888;
+  --radial-blue-2-alpha-60: #88888899;
+  --radial-blue-2-alpha-0: #88888800;
+}
+
 #root {
-  color: #213B66;
+  color: var(--blue);
   font-family: 'Titillium Web', sans-serif;
   --swiper-theme-color: #fff;
 }
@@ -16,7 +60,7 @@
 }
 
 #slogan {
-  background-color: rgba(6, 24, 52, 0.06);
+  background-color: var(--wrap-background);
 }
 
 /* 
@@ -45,10 +89,10 @@ body::-webkit-scrollbar {
 } */
 
 .radial {
-  background: rgb(6, 24, 52);
-  background: -moz-radial-gradient(circle, rgba(6, 24, 52, 0.5) 0%, rgba(23, 46, 84, 0.6) 5%, rgba(23, 46, 84, 0) 55%);
-  background: -webkit-radial-gradient(circle, rgba(6, 24, 52, 0.5) 0%, rgba(23, 46, 84, 0.6) 5%, rgba(23, 46, 84, 0) 55%);
-  background: radial-gradient(circle, rgba(6, 24, 52, 0.5) 0%, rgba(23, 46, 84, 0.6) 5%, rgba(23, 46, 84, 0) 55%);
+  background: var(--radial-blue-1);
+  background: -moz-radial-gradient(circle, var(--radial-blue-1-alpha-50) 0%, var(--radial-blue-2-alpha-60) 5%, var(--radial-blue-2-alpha-0) 55%);
+  background: -webkit-radial-gradient(circle, var(--radial-blue-1-alpha-50) 0%, var(--radial-blue-2-alpha-60) 5%, var(--radial-blue-2-alpha-0) 55%);
+  background: radial-gradient(circle, var(--radial-blue-1-alpha-50) 0%, var(--radial-blue-2-alpha-60) 5%, var(--radial-blue-2-alpha-0) 55%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#061834", endColorstr="#172e54", GradientType=1);
 }
 
@@ -70,4 +114,24 @@ body::-webkit-scrollbar {
   -webkit-mask-image: linear-gradient(rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 0));
   mask-image: linear-gradient(rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 0));
   mask-mode: alpha
+}
+
+@keyframes ellipsis {
+  0% {
+    content: "Loading Portfolio";
+  }
+  33% {
+    content: "Loading Portfolio.";
+  }
+  66% {
+    content: "Loading Portfolio..";
+  }
+  100% {
+    content: "Loading Portfolio...";
+  }
+}
+
+.ellipsis::after {
+  content: "Loading Portfolio";
+  animation: ellipsis 2.5s infinite;
 }
