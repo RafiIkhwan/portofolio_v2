@@ -72,7 +72,7 @@ export default function Header({ activeSection }) {
 					</a>
 				</li>
 				<li>
-					<a href="https://www.instagram.com/rfkhwnprnm/">
+					<a href="https://www.instagram.com/rafiikhwanp/">
 						<Instagram />
 					</a>
 				</li>
